@@ -12,16 +12,16 @@ import smtplib
 from twilio.rest import Client
 
 # Define SMS variables here
-APIKeyTwilio = 'SKec9befa182856414a1fd489da935a922'
-account_sid = 'ACa8a42dd3f98d75fd9f9b88c7156811b1'
-auth_token = '94680ed9727c6d9673e3e24ca74d6e21'
+APIKeyTwilio = ''
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
 # Define email variables here
-gmail_user = 'tim.munyao@gmail.com'
-gmail_password = '1988MyTime.!'
+gmail_user = ''
+gmail_password = ''
 sent_from = gmail_user
-to = ['it@mpkenya.com', 't.appytude@gmail.com', 'boniface.mungata@minigrp.com', 'george.wanyonyi@minigrp.com']
+to = ['user1@gmail.com', 'user2@gmail.com', 'user3@gmail.com', 'user4@gmail.com']
 subject = 'INTERNET DOWNTIME'
 
 # Define hosts file here
@@ -41,8 +41,8 @@ for line in lines:
         # send sms function
         message = client.messages.create(
             body="\nDear Administrator,\nYour host: " + str(line) + " is Offline/ Unreachable\n",
-            from_='+15866666176',
-            to='+254779069307'
+            from_='',
+            to=''
             # to='+254728599188'
         )
 
